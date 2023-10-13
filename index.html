@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordPal - Your Secure Password Manager</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Link to FontAwesome icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>PasswordPal</h1>
+        <p>Your Secure Password Manager</p>
+        <div class="top-buttons">
+            <a href="#">Home</a>
+            <a href="#" id="signup-button">Signup</a> <!-- Add an ID to the Signup button -->
+            <a href="#">Contact Us</a>
+        </div>
+    </header>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" action="dashboard.html" method="POST">
+            <input type="email" class="input-field" placeholder="Email">
+            <input type="password" class="input-field" placeholder="Password">
+            <div class="captcha-container">
+                <!-- Add your captcha element here -->
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <div class="social-login">
+            <a href="#" class="login-button login-google">
+                <i class="fab fa-google"></i> Login with Google
+            </a>
+            <a href="#" class="login-button login-microsoft">
+                <i class="fab fa-windows"></i> Login with Microsoft
+            </a>
+        </div>
+    </div>
+    <!-- Hidden Signup Popup -->
+<!-- Hidden Signup Popup -->
+<div id="signup-popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Sign-up</h2>
+        </div>
+        <div class="signup-divider"></div>
+        <!-- Signup form and content goes here -->
+        <form class="signup-form" action="signup-process.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password">
+            
+            <div class="button-container">
+                <button type="submit" class="signup-button">Signup</button>
+                <button id="close-popup" class="signup-button">Close</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <footer>
+        &copy; 2023 PasswordPal. All rights reserved.
+    </footer><script src="script.js"></script>
+
+</body>
+
+</html>

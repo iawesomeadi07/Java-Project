@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Saver</title>
+    <!-- Include Font Awesome CSS using a CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <!-- Include the external JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Add the top navigation bar -->
+    <nav class="top-navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <!-- Your logo and other header content goes here -->
+    </header>
+    <main>
+        
+        <section class="password-form">
+            <h2>Save Your Password</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="website">Website URL</label>
+                    <input type="text" id="website" name="website" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <!-- Add the eye icon button for toggling password visibility -->
+                    <button type="button" id="toggle-password-visibility"><i class="far fa-eye"></i></button>
+                </div>
+                <!-- Add the "Generate Password" button with an ID -->
+                <button type="button" id="generate-password">Generate Password</button>
+                <button type="submit">Save Password</button>
+            </form>
+        </section>
+        <section class="password-list">
+            <!-- Display saved passwords here -->
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 Password Saver. All rights reserved.
+    </footer>
+    <div class="toggle-button" id="toggle-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</body>
+</html>

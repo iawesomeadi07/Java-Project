@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Background image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+/* Header styling with glass morphism effect */
+header {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    backdrop-filter: blur(0.5px); /* Add a blur effect to the background */
+    box-shadow: 0px 19px 17px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* header p{
+    font-family: 'Cedarville Cursive', cursive;
+} */
+
+/* Top right buttons */
+.top-buttons {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* Vertically center the buttons */
+}
+
+.top-buttons a {
+    text-decoration: none;
+    color: #030303;
+    margin-left: 10px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Add transitions for color and text-decoration */
+}
+
+/* Hover styles for the buttons */
+.top-buttons a:hover {
+    color: #000; /* Change text color to black on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Login container */
+/* Login container with margin to create a gap */
+.login-container {
+    flex-grow: 1;
+    width: 300px;
+    margin: 20px auto; /* Add margin to push the login container down */
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Login form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input fields */
+.input-field {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to input fields */
+}
+
+/* Captcha container */
+.captcha-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Login button */
+.login-button {
+    background-color: #0d1114;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow to the login button */
+}
+
+/* Social login section */
+.social-login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch buttons to the width of the parent container */
+}
+
+/* Add styles for the social login buttons */
+.login-google,
+.login-microsoft {
+    margin: 10px 0; /* Adjust vertical spacing if needed */
+    padding: 10px 0; /* Stretch buttons vertically to match the height of other elements */
+    background-color: #3e444d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow to the social login buttons */
+}
+
+.login-google:hover,
+.login-microsoft:hover {
+    background-color: #357AE8;
+}
+
+/* FontAwesome icon color */
+.fa-google,
+.fa-windows {
+    margin-right: 10px; /* Adjust the icon spacing */
+    color: #fff;
+}
+/* Styles for the popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    max-width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the Close button */
+#close-popup {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* Styles for the Signup Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    max-width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the Close button */
+#close-popup {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Signup form styling */
+.signup-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.signup-form {
+    text-align: left;
+}
+
+.signup-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.signup-button {
+    background-color: #0d1114;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.signup-button:hover {
+    background-color: #357AE8;
+}
